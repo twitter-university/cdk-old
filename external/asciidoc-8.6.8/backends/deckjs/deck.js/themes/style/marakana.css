@@ -222,3 +222,20 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgCAYA
   -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
+
+img[alt="1"],
+img[alt="2"],
+img[alt="3"],
+img[alt="4"],
+img[alt="5"],
+img[alt="6"],
+img[alt="7"],
+img[alt="8"],
+img[alt="9"]
+{
+	display: inline;
+	vertical-align: bottom;
+	font-size: 6px;
+	padding: 0 5px;
+}
+
