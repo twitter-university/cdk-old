@@ -4,7 +4,7 @@ Marakana CDK is a set of tools, templates, documentation, and best practices for
 
 == Requirements ==
 
-CDK is based on http://www.methods.co.nz/asciidoc/[Asciidoc]. As such, it requires *Python* to be installed. Also, it currently uses http://www.gnu.org/software/src-highlite/[GNU Source-Highlight\, which also should be installed.
+CDK is based on http://www.methods.co.nz/asciidoc/[Asciidoc]. As such, it requires *Python* to be installed. Also, it currently uses http://www.gnu.org/software/src-highlite/[GNU Source-Highlight], which also should be installed.
 
 Make sure CDK directory is in your path. In Bash, for example:
 
