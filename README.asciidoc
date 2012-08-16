@@ -19,6 +19,9 @@ On OSX, you could just put the line above in your `~/.bash_profile`.
 `asc`::
 The main tool is `asc`. It processes an AsciiDoc file and creates an output that adheres to Marakana Beautiful Courseware standards.
 
+`post`::
+Creates Marakana Stream-ready posts from a module.
+
 
 == Goodies ==
 
