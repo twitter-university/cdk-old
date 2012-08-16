@@ -39,3 +39,7 @@ ln -s YOUR_PATH_TO/cdk/textmate/AsciiDoc.tmbundle .
 
 Style Guide::
 This is the original style guide for developing courseware. Needs an update.
+
+== Feature Requests ==
+
+A tool to publish a course or a module directly to the cloud, such as S3, with a link to it.
