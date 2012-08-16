@@ -12,5 +12,5 @@ attrs+=("-a deckjs_theme=marakana")
 attrs+=("-a data-uri")
 attrs+=("-a icons")
 
-eval asciidoc -f ${CDK_DIR}/external/asciidoc/asciidoc.conf ${attrs[@]} $FILE
+eval ${CDK_DIR}/external/asciidoc/asciidoc.py -f ${CDK_DIR}/external/asciidoc/asciidoc.conf ${attrs[@]} $FILE
 
