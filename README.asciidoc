@@ -8,7 +8,13 @@ CDK is based on http://www.methods.co.nz/asciidoc/[Asciidoc]. As such, it requir
 
 Make sure CDK directory is in your path. In Bash, for example:
 
-[source,shell]
 ----
 export PATH=$PATH:YOUR_PATH_TO/cdk
 ----
+
+On OSX, you could just put the line above in your `~/.bash_profile`.
+
+== Tools ==
+
+`asc`::
+The main tool is `asc`. It processes an AsciiDoc file and creates an output that adheres to Marakana Beautiful Courseware standards.
