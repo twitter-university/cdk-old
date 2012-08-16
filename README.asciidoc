@@ -32,9 +32,9 @@ Textmate::
 Here, you will find the Textmate AsciiDoc bundle, as well as our extensions to Textmate to help with Beautiful Courseware development. The easiest way to add these bundles to your Textmate is the following:
 
 ----
-cd ~/Library/Application\ Support/TextMate/Bundles
-ln -s YOUR_PATH_TO/cdk/textmate/Marakana.tmbundle .
-ln -s YOUR_PATH_TO/cdk/textmate/AsciiDoc.tmbundle .
+cd ~/Library/Application\ Support/TextMate/Bundles; 
+ln -s YOUR_PATH_TO/cdk/textmate/Marakana.tmbundle . ; 
+ln -s YOUR_PATH_TO/cdk/textmate/AsciiDoc.tmbundle . ;
 ----
 
 Style Guide::

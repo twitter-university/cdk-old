@@ -10,6 +10,7 @@ attrs=()
 attrs+=("-b deckjs")
 attrs+=("-a deckjs_theme=marakana")
 attrs+=("-a data-uri")
+attrs+=("-a iconsdir=${CDK_DIR}/images/icons")
 attrs+=("-a icons")
 
 eval asciidoc -f ${CDK_DIR}/external/asciidoc/asciidoc.conf ${attrs[@]} $FILE
