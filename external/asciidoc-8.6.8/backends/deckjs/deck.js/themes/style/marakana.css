@@ -21,14 +21,15 @@ h2.section-slide {
 	font-weight: bold;
   	text-align: center;
 }
-
+/*
 .monospaced, code, pre {
   font-family: "Courier New", Courier, monospace;
   font-size: inherit;
   color: navy;
   padding: 0;
   margin: 0;
-}
+  }
+*/
 
 .deck-container {
   font-family: 'PT Sans';
@@ -248,4 +249,9 @@ img[alt="9"]
 }
 div.colist.arabic table tbody tr td:first-child{/*may cause issues*/
 	width: 26px
+}
+.monospaced{
+	font-family: courier !important;
+	color: #434343 !important;
+	text-shadow: 1px 1px 2px #D3D0D0 !important;
 }
