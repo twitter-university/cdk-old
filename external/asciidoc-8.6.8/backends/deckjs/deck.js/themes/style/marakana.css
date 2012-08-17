@@ -255,3 +255,8 @@ div.colist.arabic table tbody tr td:first-child{/*may cause issues*/
 	color: #434343 !important;
 	text-shadow: 1px 1px 2px #D3D0D0 !important;
 }
+h2:empty{
+	padding: 0;
+	margin: 0;
+	margin-top: 44px;
+}
