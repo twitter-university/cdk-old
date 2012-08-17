@@ -2,9 +2,11 @@
 
 Marakana CDK is a set of tools, templates, documentation, and best practices for creating Marakana Beautiful Courseware.
 
+It is based on http://www.methods.co.nz/asciidoc/[Asciidoc] as the authoring tool right now, modified Deck.js as presentation template, and a lot of glue to hold it all together.
+
 == Requirements ==
 
-CDK is based on http://www.methods.co.nz/asciidoc/[Asciidoc]. As such, it requires *Python* to be installed. Also, it currently uses http://www.gnu.org/software/src-highlite/[GNU Source-Highlight], which also should be installed. See https://wincent.com/wiki/Installing_GNU_Source-highlight_on_Mac_OS_X_10.6.7_Snow_Leopard[Installing Source-Highlight] for OSX.
+You need Python. If running on a platform other than OSX, you also need http://www.gnu.org/software/src-highlite/[GNU Source-Highlight].
 
 Make sure CDK directory is in your path. In Bash, for example:
 
@@ -42,4 +44,8 @@ This is the original style guide for developing courseware. Needs an update.
 
 == Feature Requests ==
 
-A tool to publish a course or a module directly to the cloud, such as S3, with a link to it.
+* A tool to publish a course or a module directly to the cloud, such as S3, with a link to it.
+
+* Be able to have a slide with no title (empty H2 is fine).
+
+* Support for breadcrumbs in slides.
