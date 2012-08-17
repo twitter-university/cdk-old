@@ -10,6 +10,8 @@ attrs=()
 attrs+=("-b stream")
 attrs+=("-a data-uri")
 attrs+=("-a icons")
+attrs+=("-a iconsdir=${CDK_DIR}/images/icons")
+attrs+=("-a icons")
 
 eval ${CDK_DIR}/external/asciidoc/asciidoc.py ${attrs[@]} $FILE_IN
 echo "Outputed " ${FILE_OUT}
