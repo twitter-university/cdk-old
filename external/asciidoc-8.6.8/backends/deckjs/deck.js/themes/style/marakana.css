@@ -22,6 +22,14 @@ h2.section-slide {
   	text-align: center;
 }
 
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+
 .deck-container {
   font-family: 'PT Sans';
   font-size: 1.5em;
