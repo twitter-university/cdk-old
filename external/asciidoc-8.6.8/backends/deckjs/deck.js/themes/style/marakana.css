@@ -238,4 +238,6 @@ img[alt="9"]
 	font-size: 6px;
 	padding: 0 5px;
 }
-
+div.colist.arabic table tbody tr td:first-child{/*may cause issues*/
+	width: 26px
+}
