@@ -13,7 +13,6 @@ This module provides a support for TOC to the deck.
 (function($, deck, undefined) {
     var $d = $(document);
     var $toc;
-        
     /*
 	Extends defaults/options.
 	
@@ -50,7 +49,8 @@ This module provides a support for TOC to the deck.
         },
 		
         keys: {
-            toc: 84 // t
+            toc: 84, // t
+			sn: 83 //s
         },
                 
         selectors: {
@@ -92,6 +92,14 @@ This module provides a support for TOC to the deck.
         $[deck]('getContainer').hasClass($[deck]('getOptions').classes.toc) ? 
         $[deck]('hideToc') : $[deck]('showToc');
     });
+    /*
+	jQuery.deck('toggleSideNotes')
+	
+	Toggles between showing and hiding the side notes.
+	*/
+    $[deck]('extend', 'toggleSideNotes', function() {
+		$(".sidebarblock").toggle();
+    });
         
     /*
         jQuery.deck('Init')
@@ -105,6 +113,9 @@ This module provides a support for TOC to the deck.
             if (e.which === opts.keys.toc || $.inArray(e.which, opts.keys.toc) > -1) {
                 $[deck]('toggleToc');
                 e.preventDefault();
+            }else if(e.which === opts.keys.sn || $.inArray(e.which, opts.keys.sn) > -1) {
+            	$[deck]('toggleSideNotes');
+				e.preventDefault();
             }
         });
         
@@ -268,4 +279,5 @@ This module provides a support for TOC to the deck.
             }
         }
     }
+	
 })(jQuery, 'deck');
