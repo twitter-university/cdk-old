@@ -24,7 +24,6 @@ The main tool is `asc`. It processes an AsciiDoc file and creates an output that
 `post`::
 Creates Marakana Stream-ready posts from a module.
 
-
 == Goodies ==
 
 Templates::
@@ -49,7 +48,7 @@ ln -s YOUR_PATH_TO/cdk/textmate2/asciidoc.tmbundle . ;
 +
 Also, you have to add `PATH` variable to point to your CDK directory by going to TextMate->Preferences->Variables.
 +
-If you don't like Textmate2 opening the preview in split pane, and prefer a new window, run the following in your Terminal:
+If you don't like TextMate2 opening the preview in split pane, and prefer a new window, run the following in your Terminal:
 +
 ----
 defaults write com.macromates.TextMate.preview htmlOutputPlacement window
@@ -62,8 +61,11 @@ This is the original style guide for developing courseware. Needs an update.
 
 == Feature Requests ==
 
+* Absolute tool bar that contains the following:
+** Bread crumbs, clickable
+** Help
+** Slide number
+
 * A tool to publish a course or a module directly to the cloud, such as S3, with a link to it.
 
-* Be able to have a slide with no title (empty H2 is fine).
-
-* Support for breadcrumbs in slides.
+* SCORM export so it can produce content for other LMSs
