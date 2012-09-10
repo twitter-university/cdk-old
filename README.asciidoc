@@ -1,10 +1,69 @@
 = Marakana Courseware Development Kit =
 
-Marakana CDK is a set of tools, templates, documentation, and best practices for creating Marakana Beautiful Courseware.
+== Overview of CDK ==
 
-It is based on http://www.methods.co.nz/asciidoc/[Asciidoc] as the authoring tool right now, modified Deck.js as presentation template, and a lot of glue to hold it all together.
+Marakana CDK is a set of tools, templates, documentation, and best practices for creating Beautiful Courseware.
 
-== Requirements ==
+CDK is based on http://www.methods.co.nz/asciidoc/[Asciidoc] as the markup for authoring.
+
+== What's Included in the Kit ==
+
+Toolchain::
+CDK comes with the *AsciiDoc*. We also included two AsciiDoc backends: Deck.js and Slidy2. Deck.js backend produces slide-like view of your content and we've customized it to work for learning purposes.
+
+Templates::
+Additionally, CDK includes courseware *templates* for a course, module, and slide. You can find these in `[CDK]/templates/` folder. Specifically look at `Course.asc`, `Module.asc`, and `Slide.asc`.
+
+Samples::
+We've also included *sample courses* to help you see how to develop courseware using CDK. You can find them in `[CDK]/samples/` folder. The output is the HTML file in each source folder.
+
+Best Practices::
+CDK is an attempt to bottle up the *best practices* for creating course materials, based on our experience at Marakana. We call these practices _Beautiful Courseware_
+
+
+== Beautiful Courseware Structure ==
+
+.Beautiful Courseware structure
+image::docs/Course_Structure.png[]
+
+
+== Course File ==
+
+A *Course* is a collection of modules. Each course should have clearly stated objectives and summary.
+
+Course  should have its own folder named _Course_Name_. There should be a main course file, _Course_Name.asc_ that includes all the other module files.
+
+For course file template, see `[CDK]/templates/Course.asc`
+
+== Module ==
+
+A *Module* is a self-contained unit of knowledge. It is usually couple of hours of learning material in length, but this can vary greatly. As a rule of thumb, a module longer than a day should probably be split up. 
+
+Each module should have clearly states objectives and summary as well. Modules consist of slides.
+
+Module should live in a file _Module_Name.asc_. Each module should be stand-alone so that modules could be combined into courses easily.
+
+For module file template, see `[CDK]/templates/Module.asc`
+
+== Slide ==
+
+A *Slide* is a single topic. It should have the main section stating a point. This main section is a mental hook - something that communicates the idea quickly. Images are great as mental hooks, or short text.
+
+All supporting text can follow on below and can be as long as couple of screens worth of supporting text, code, images. If you want to be able to toggle them on/off during presentation, you can wrap the supporting text in an AsciiDoc side note block.
+
+For an example of a slide, see `[CDK]/templates/Slide.asc`
+
+
+== What is CDK great for ==
+
+CDK is designed to allow you to *rapidly create* great looking course material. It uses a simple markup text based on AsciiDoc, and some basic rules about what makes up a courseware. 
+
+== What CDK is not designed to do ==
+
+CDK takes care of making your content look great. As such, the content itself should be as much look&feel-free as possible. In other words, focus on content, not its presentation and CDK will do its best to make it look reasonably beautiful.
+
+
+== Requirements for Setting Up CDK ==
 
 You need Python. If running on a platform other than OSX, you also need http://www.gnu.org/software/src-highlite/[GNU Source-Highlight].
 
@@ -24,13 +83,17 @@ The main tool is `asc`. It processes an AsciiDoc file and creates an output that
 `post`::
 Creates Marakana Stream-ready posts from a module.
 
-== Goodies ==
+`ascidoc`::
+This is the standard AsciiDoc processor, included as part of CDK. You can use it to pass in other styles, or arguments to it. All other tools depend on `asciidoc`.
+
+
+== CDK Goodies ==
 
 Templates::
-Contains courseware templates, such as a module, an intro, a slide. It's work in progress!
+Contains courseware templates, such as a course, a module, and a slide.
 
-Textmate::
-Here, you will find the Textmate AsciiDoc bundle, as well as our extensions to Textmate to help with Beautiful Courseware development. The easiest way to add these bundles to your Textmate is the following:
+TextMate::
+Here, you will find the TextMate AsciiDoc bundle, as well as our extensions to Textmate to help with Beautiful Courseware development. The easiest way to add these bundles to your TextMate is the following:
 +
 ----
 cd "~/Library/Application\ Support/TextMate/Bundles"; 
@@ -38,8 +101,8 @@ ln -s YOUR_PATH_TO/cdk/textmate/Marakana.tmbundle . ;
 ln -s YOUR_PATH_TO/cdk/textmate/AsciiDoc.tmbundle . ;
 ----
 
-Textmate2::
-For Textmat2, you need to link to a https://github.com/zuckschwerdt/asciidoc.tmbundle[different bundle], already included in CDK:
+TextMate2::
+For TextMate2, you need to link to a https://github.com/zuckschwerdt/asciidoc.tmbundle[different bundle], already included in CDK:
 +
 ----
 cd "~/Library/Application\ Support/Avian/Bundles"; 
@@ -54,6 +117,8 @@ If you don't like TextMate2 opening the preview in split pane, and prefer a new 
 defaults write com.macromates.TextMate.preview htmlOutputPlacement window
 ----
 
+Samples::
+Sample courseware developed using CDK.
 
 Style Guide::
 This is the original style guide for developing courseware. Needs an update.
