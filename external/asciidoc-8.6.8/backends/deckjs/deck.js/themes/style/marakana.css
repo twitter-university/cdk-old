@@ -64,6 +64,7 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgCAYA
 }
 .deck-container .slide p {
   margin-bottom: 0.5em;
+  font-size: 1.2em;
 }
 .deck-container .slide pre {
   border-color: #cde;
@@ -75,6 +76,10 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgCAYA
 .deck-container .slide code, .deck-container .slide pre {
   font-size: 0.9em;
   font-family: 'Ubuntu Mono';
+}
+.deck-container .slide dt {
+  font-size: 1.5em;
+  color: #0B7495;
 }
 .borderradius .deck-container .slide pre {
   -webkit-border-radius: 5px;
@@ -259,4 +264,66 @@ h2:empty{
 	padding: 0;
 	margin: 0;
 	margin-top: 44px;
+}
+
+/*
+ * html5 specific
+ * copied from asciidoc.css, which is not included
+ * */
+
+table.tableblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+thead, p.tableblock.header {
+  font-weight: bold;
+  color: #527bbd;
+}
+p.tableblock {
+  margin-top: 0;
+}
+table.tableblock {
+  border-width: 3px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-color: #527bbd;
+  border-collapse: collapse;
+}
+th.tableblock, td.tableblock {
+  border-width: 1px;
+  padding: 4px;
+  border-style: solid;
+  border-color: #527bbd;
+}
+
+table.tableblock.frame-topbot {
+  border-left-style: hidden;
+  border-right-style: hidden;
+}
+table.tableblock.frame-sides {
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+}
+table.tableblock.frame-none {
+  border-style: hidden;
+}
+
+th.tableblock.halign-left, td.tableblock.halign-left {
+  text-align: left;
+}
+th.tableblock.halign-center, td.tableblock.halign-center {
+  text-align: center;
+}
+th.tableblock.halign-right, td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top, td.tableblock.valign-top {
+  vertical-align: top;
+}
+th.tableblock.valign-middle, td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+th.tableblock.valign-bottom, td.tableblock.valign-bottom {
+  vertical-align: bottom;
 }
