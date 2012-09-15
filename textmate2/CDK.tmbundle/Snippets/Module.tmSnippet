@@ -1,4 +1,9 @@
-[[Module_Name]]
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>[[Module_Name]]
 = Module Name ==
 
 == Objectives of Module Name ==
@@ -23,3 +28,12 @@ Your app is a collection of various "screens", implemented as activities. You al
 == Summary of Module Name ==
 
 In this module, you learned to do the following: x, y, z. By now, you should be able to apply that knowledge and develop a simple UI for your application.
+</string>
+	<key>name</key>
+	<string>Module</string>
+	<key>tabTrigger</key>
+	<string>module</string>
+	<key>uuid</key>
+	<string>052B90ED-3094-41FF-893D-24C68F802B1C</string>
+</dict>
+</plist>

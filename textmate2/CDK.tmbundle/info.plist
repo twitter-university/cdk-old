@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>znexb@znenxnan.pbz</string>
+	<key>contactName</key>
+	<string>Marko Gargenta</string>
+	<key>description</key>
+	<string>Marakana Courseware Development Kit (CDK)
+Author: Marko Gargenta &lt;marko@marakana.com&gt;
+@copyright Marakana Inc. 2012</string>
+	<key>name</key>
+	<string>CDK</string>
+	<key>uuid</key>
+	<string>6660ECC3-D861-47D2-AAAF-6DC595169BE2</string>
+</dict>
+</plist>

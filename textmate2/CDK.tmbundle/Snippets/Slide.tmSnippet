@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>== Slide Title ==
+
+// Slide content goes here
+// It's a mental hook, a short message, tweet-like point, should fit in a screen
+// Graphics work even better!
+
+
+****
+
+// Student notes content goes here
+// Can be toggled in Slide mode using 's' key binding.
+// It gets printed in PDF output
+
+****
+</string>
+	<key>name</key>
+	<string>Slide</string>
+	<key>tabTrigger</key>
+	<string>slide</string>
+	<key>uuid</key>
+	<string>89332DEA-1DF3-46D1-A1F2-ACA910188616</string>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>. What is the questions?
++
+****
+What is the answer?
+****
++</string>
+	<key>name</key>
+	<string>Quiz Question</string>
+	<key>tabTrigger</key>
+	<string>question</string>
+	<key>uuid</key>
+	<string>30E63EDD-4F62-4F28-B8D4-16E958B6D6B2</string>
+</dict>
+</plist>

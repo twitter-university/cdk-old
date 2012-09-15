@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>[[Review_Questions_for_Module_Name_Module]]
+== Review Questions for Module_Name Module ==
+
+****
+WARNING: Your answers will show. Use _S_ keyboard shortcut to toggle showing answers.
+****
+
+[options="incremental"]
+
+. What is the questions?
++
+****
+What is the answer?
+****
++
+
+// Add questions here. Use question-&gt;tab TextMate trigger
+
+'''
+Congratulations!</string>
+	<key>name</key>
+	<string>Review Questions</string>
+	<key>tabTrigger</key>
+	<string>review</string>
+	<key>uuid</key>
+	<string>85FAAD48-004D-41D9-AA10-015C0DC035D6</string>
+</dict>
+</plist>

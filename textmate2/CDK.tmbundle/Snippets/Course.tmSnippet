@@ -1,4 +1,9 @@
-:author: Aleksandar (Saša) Gargenta, Ken Jones, Marko Gargenta
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>:author: Aleksandar (Saša) Gargenta, Ken Jones, Marko Gargenta
 :copyright: 2012 Marakana, Inc. All rights reserved.
 
 [[Rocket_Science]]
@@ -36,3 +41,12 @@ In this course you will learn how to design, develop, and maintain a space shutt
 
 In this course, you learned how to design, develop, and maintain a space shuttle. 
 
+</string>
+	<key>name</key>
+	<string>Course</string>
+	<key>tabTrigger</key>
+	<string>course</string>
+	<key>uuid</key>
+	<string>C3DA1440-D8DD-41E6-922D-B8F4CEFF3C07</string>
+</dict>
+</plist>
