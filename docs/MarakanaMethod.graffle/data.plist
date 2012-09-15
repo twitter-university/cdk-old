@@ -50,7 +50,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-09-15 11:19:35 +0000</string>
+	<string>2012-09-15 19:41:11 +0000</string>
 	<key>Modifier</key>
 	<string>Marko Gargenta</string>
 	<key>NotesVisible</key>
@@ -2815,12 +2815,66 @@ What's In For Me}</string>
 			<array>
 				<dict>
 					<key>Class</key>
+					<string>LineGraphic</string>
+					<key>Head</key>
+					<dict>
+						<key>ID</key>
+						<integer>3006</integer>
+					</dict>
+					<key>ID</key>
+					<integer>2934</integer>
+					<key>Points</key>
+					<array>
+						<string>{283.64486127340678, 402.44429490176049}</string>
+						<string>{251.24089715101979, 303.22980951543775}</string>
+						<string>{249.48812372078805, 226.98415921501166}</string>
+						<string>{272.9486631627841, 150.55571233682491}</string>
+					</array>
+					<key>Style</key>
+					<dict>
+						<key>stroke</key>
+						<dict>
+							<key>Cap</key>
+							<integer>0</integer>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.998734</string>
+								<key>g</key>
+								<string>0.800366</string>
+								<key>r</key>
+								<string>0.398474</string>
+							</dict>
+							<key>HeadArrow</key>
+							<string>SharpArrow</string>
+							<key>HeadScale</key>
+							<real>0.85714292526245117</real>
+							<key>Join</key>
+							<integer>0</integer>
+							<key>Legacy</key>
+							<true/>
+							<key>Pattern</key>
+							<integer>1</integer>
+							<key>TailArrow</key>
+							<string>0</string>
+							<key>Width</key>
+							<real>2</real>
+						</dict>
+					</dict>
+					<key>Tail</key>
+					<dict>
+						<key>ID</key>
+						<integer>3025</integer>
+					</dict>
+				</dict>
+				<dict>
+					<key>Class</key>
 					<string>Group</string>
 					<key>Graphics</key>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{244.59211294952735, 257.34579967284094}, {67, 48}}</string>
+							<string>{{461.76901116069433, 35.256725438519233}, {67, 48}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -2835,7 +2889,7 @@ What's In For Me}</string>
 								<real>39</real>
 							</dict>
 							<key>ID</key>
-							<integer>24711</integer>
+							<integer>24714</integer>
 							<key>Shape</key>
 							<string>Rectangle</string>
 							<key>Style</key>
@@ -2875,11 +2929,11 @@ What's In For Me}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{305.26431063689222, 247.65420506778742}, {26.143549982576928, 26.143549982576928}}</string>
+							<string>{{522.4412088480592, 25.565130833465709}, {26.143549982576928, 26.143549982576928}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
-							<integer>24712</integer>
+							<integer>24715</integer>
 							<key>ImageID</key>
 							<integer>14</integer>
 							<key>Shape</key>
@@ -2905,7 +2959,7 @@ What's In For Me}</string>
 						</dict>
 					</array>
 					<key>ID</key>
-					<integer>24710</integer>
+					<integer>24713</integer>
 				</dict>
 				<dict>
 					<key>Class</key>
@@ -2919,9 +2973,9 @@ What's In For Me}</string>
 					<integer>24708</integer>
 					<key>Points</key>
 					<array>
-						<string>{143.92809734718568, 133.32752271401756}</string>
-						<string>{155.71474520338941, 86.762284796471633}</string>
-						<string>{226.3157230679175, 75.312906384235873}</string>
+						<string>{134.73541941795304, 122.97890652310323}</string>
+						<string>{168.33590636498346, 86.762284796471633}</string>
+						<string>{226.3157230679175, 76.299923111848599}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2968,9 +3022,9 @@ What's In For Me}</string>
 					<integer>24707</integer>
 					<key>Points</key>
 					<array>
-						<string>{132.87335189208864, 289.82990233975306}</string>
-						<string>{127.87360763527127, 262.66746228503456}</string>
-						<string>{133.16783857214952, 227.32751962591851}</string>
+						<string>{96.655543314803822, 303.22980951543775}</string>
+						<string>{93.491288430162271, 279.56736212196415}</string>
+						<string>{98.228534784944983, 242.97890343500421}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3017,9 +3071,11 @@ What's In For Me}</string>
 					<integer>24706</integer>
 					<key>Points</key>
 					<array>
-						<string>{219.3157499765224, 425.57388758443312}</string>
+						<string>{237.34209403966608, 448.19891528185661}</string>
+						<string>{196.02853409871966, 448.70999813932809}</string>
+						<string>{172.36609279059104, 439.06974427305346}</string>
 						<string>{148.03050208293641, 418.66429757566038}</string>
-						<string>{141.31978195843814, 381.82990035733479}</string>
+						<string>{144.8359004677871, 417.19786132518158}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3066,9 +3122,10 @@ What's In For Me}</string>
 					<integer>24705</integer>
 					<key>Points</key>
 					<array>
-						<string>{438.39068563792159, 387.32991055341773}</string>
-						<string>{415.12521287768851, 422.4183966858518}</string>
-						<string>{341.3157499765224, 427.38329213128469}</string>
+						<string>{450.91730819221567, 413.72980430500235}</string>
+						<string>{433.52933389512185, 436.44058412770585}</string>
+						<string>{399.29553001290441, 452.21554499979158}</string>
+						<string>{359.34209403966611, 450.32727013855231}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3115,9 +3172,9 @@ What's In For Me}</string>
 					<integer>24704</integer>
 					<key>Points</key>
 					<array>
-						<string>{448.47238700446246, 233.82752536547753}</string>
-						<string>{453.01307894326101, 255.65636856410759}</string>
-						<string>{449.97515833259996, 284.32990359316312}</string>
+						<string>{468.17041234977529, 247.77870968040787}</string>
+						<string>{472.09034936022039, 263.79240124987842}</string>
+						<string>{468.54576917694396, 297.72979734474774}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3164,9 +3221,10 @@ What's In For Me}</string>
 					<integer>24703</integer>
 					<key>Points</key>
 					<array>
-						<string>{334.31572306791747, 73.506243736742618}</string>
-						<string>{416.87798630792025, 84.133124651124021}</string>
-						<string>{431.31397598553207, 126.82752144207399}</string>
+						<string>{334.31572306791747, 72.128709935426897}</string>
+						<string>{382.69890441840107, 77.122030930197013}</string>
+						<string>{410.7432793021091, 93.77337851739864}</string>
+						<string>{427.62956710049485, 114.77870575700433}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3208,7 +3266,7 @@ What's In For Me}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{264.81574334605887, 476.48653722392419}, {31, 22}}</string>
+							<string>{{250.34208740920252, 492.44429075958374}, {96, 48}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -3254,7 +3312,11 @@ What's In For Me}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs36 \cf0 Lab}</string>
+\f0\fs36 \cf0 Lab\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\fs22 \cf0 Students work on \
+a lab independently}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -3263,7 +3325,7 @@ What's In For Me}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{219.3157499765224, 386.48654136610094}, {122, 90}}</string>
+							<string>{{237.34209403966605, 402.44429490176049}, {122, 90}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -3302,7 +3364,7 @@ What's In For Me}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{104.81573429363957, 205.32751962591848}, {60, 22}}</string>
+							<string>{{56.835905704488681, 194.97890343500418}, {89, 48}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -3348,7 +3410,11 @@ What's In For Me}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs36 \cf0 Review}</string>
+\f0\fs36 \cf0 Review\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\fs22 \cf0 instructor reviews \
+the module}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -3357,7 +3423,7 @@ What's In For Me}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{67.815734954134342, 133.32752271401753}, {134, 72}}</string>
+							<string>{{34.335906364983458, 122.97890652310323}, {134, 72}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -3584,7 +3650,7 @@ What's In For Me}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{426.18425194900857, 365.32991055341773}, {39, 22}}</string>
+							<string>{{426.31577150235483, 378.72980430500235}, {76, 35}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -3630,7 +3696,10 @@ What's In For Me}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs36 \cf0 Q&amp;A}</string>
+\f0\fs36 \cf0 Q&amp;A\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\fs22 \cf0 Any questions?}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -3639,7 +3708,7 @@ What's In For Me}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{398.18424043192613, 284.32990359316312}, {95, 81}}</string>
+							<string>{{416.81575998527239, 297.72979734474774}, {95, 81}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -3678,7 +3747,7 @@ What's In For Me}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{400.18423958078597, 211.82752536547753}, {92, 22}}</string>
+							<string>{{404.79553410308546, 199.77870968040787}, {115, 48}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -3724,7 +3793,10 @@ What's In For Me}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs36 \cf0 Work Along}</string>
+\f0\fs36 \cf0 Build Together\
+
+\fs22 Students work along \
+with instructor}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -3733,7 +3805,7 @@ What's In For Me}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{383.18423549060492, 126.82752144207399}, {125, 85}}</string>
+							<string>{{399.29553001290441, 114.77870575700433}, {125, 85}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -3772,7 +3844,7 @@ What's In For Me}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{95.815733380367334, 359.82990035733474}, {87, 22}}</string>
+							<string>{{57.835900467787098, 373.22980753301943}, {87, 48}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -3818,7 +3890,11 @@ What's In For Me}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs36 \cf0 Homework}</string>
+\f0\fs36 \cf0 Homework\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\fs22 \cf0 Optional reading\
+to fill in the gaps}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -3827,7 +3903,7 @@ What's In For Me}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{76.815742510755086, 289.82990233975306}, {125, 70}}</string>
+							<string>{{38.835909598174851, 303.22980951543775}, {125, 70}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -3866,7 +3942,7 @@ What's In For Me}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{249.81572306791747, 102.55571233682493}, {61, 22}}</string>
+							<string>{{236.81572306791747, 102.55571233682493}, {87, 48}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -3912,7 +3988,11 @@ What's In For Me}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs36 \cf0 Lecture}</string>
+\f0\fs36 \cf0 Lecture\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\fs22 \cf0 Instructor delivers\
+new lecture}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>

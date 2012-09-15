@@ -11,6 +11,9 @@ CDK is based on http://www.methods.co.nz/asciidoc/[Asciidoc] as the markup for a
 .CDK Promise
 image::docs/CDK.svg[]
 
+// TODO: Add the links to these
+An example of what is possible to with CDK is this conference talk that is later on also published as an article fitting the stream.
+
 == What's Included in the Kit ==
 
 Toolchain::
@@ -25,11 +28,18 @@ We've also included *sample courses* to help you see how to develop courseware u
 Best Practices::
 CDK is an attempt to bottle up the *best practices* for creating course materials, based on our experience at Marakana. We call these practices _Beautiful Courseware_
 
-== What is CDK For ==
+== What CDK Is For ==
 
+Rapidly Create::
 CDK is designed to allow you to *rapidly create* great looking course material. It uses a simple markup text based on AsciiDoc, and some basic rules about what makes up a courseware. 
 
-CDK takes care of making your content look great. As such, the content itself should be as much look&feel-free as possible. In other words, focus on content, not its presentation and CDK will do its best to make it look reasonably beautiful.
+Modularize Content::
+With CDK templates for what makes up a course and a module, your content will be well-modularized so you can easily mashup various modules into custom classes for specific needs.
+
+Make it Beautiful in Any Form::
+CDK takes care of making your content look great. It comes with various templates, and you can easily create your own. As such, the content itself should be as much look&feel-free as possible. In other words, focus on content, not its presentation and CDK will do its best to make it look beautiful.
+
+
 
 // Beautiful Courseware
 include::docs/Beautiful_Courseware.asc[]
@@ -47,3 +57,6 @@ include::docs/Setup.asc[]
 * A tool to publish a course or a module directly to the cloud, such as S3, with a link to it.
 
 * SCORM export so it can produce content for other LMSs
+
+// Legal
+include::Legal-Disclaimer.asc[]

@@ -4,3 +4,7 @@
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# Local test files *
+********************
+/template/*.html
