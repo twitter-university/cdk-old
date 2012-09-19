@@ -21,6 +21,10 @@ h2.section-slide {
 	font-weight: bold;
   	text-align: center;
 }
+span.big {
+  font-size: 1.5em;
+  color: #0B7495;
+}
 /*
 .monospaced, code, pre {
   font-family: "Courier New", Courier, monospace;
