@@ -64,5 +64,12 @@ include::docs/Setup.asc[]
 * About the author
 * Legal
 
+
+* Advancing to the next slide (or going back) does not move the viewport to the top of the page.
+* Using consecutive note/tip/warning images makes the first image appear disproportionately small.
+* We should use the up arrow to move back to the beginning of the module?
+* Position the module titles (H2s) in the middle of the page
+
+
 // Legal
 include::Legal-Disclaimer.asc[]
