@@ -5,7 +5,10 @@ MIT license
 */
 
 /*
-This module provides a breadcrumb menu listing the parent slides.
+This module provides a breadcrumb menu listing the parent
+slides. Requires extra classes put on slides (slide0), subslides
+(slide1), subsubslides (slide2).
+
 */
 
 (function($, deck, undefined) {
