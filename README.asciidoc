@@ -51,6 +51,14 @@ include::docs/Setup.asc[]
 
 * ToC generator for Stream Posts. See for example how Android docs do it (top-right box): http://developer.android.com/guide/components/activities.html
 
+* A way to make a bookmark?
+
+* A way to create a note, possibly share it with others?
+
+* Review questions automatically become polls, so we can see people's results on a centralized dashboard.
+
+* Markup extensions: I'd like to be able to make certain text BIG, for example.
+
 * A tool to publish a course or a module directly to the cloud, such as S3, with a link to it.
 
 * SCORM export so it can produce content for other LMSs
