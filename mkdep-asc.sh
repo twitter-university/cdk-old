@@ -6,7 +6,7 @@ function process_asc_file() {
     echo "$target_file: `pwd`/`basename $source_file`"
     if [[ $source_file =~ \.asc$ ]]; then
         local inc_file
-        local source_files=`perl -nle 'print $1 if /include::(.+?)\[\]/' $source_file`
+        local source_files=`perl -nle 'print $1 if /^include::(.+?)\[\]/' $source_file`
         for inc_file in $source_files; do
             local cur_dir=`pwd`
             cd `dirname $inc_file`
