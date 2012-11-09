@@ -39,7 +39,11 @@ With CDK templates for what makes up a course and a module, your content will be
 Make it Beautiful in Any Form::
 CDK takes care of making your content look great. It comes with various templates, and you can easily create your own. As such, the content itself should be as much look&feel-free as possible. In other words, focus on content, not its presentation and CDK will do its best to make it look beautiful.
 
+== AsciiDoc ==
 
+CDK uses AsciiDoc as markup language of choice::
+* See http://www.methods.co.nz/asciidoc/[AsciiDoc]
+* See http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]
 
 // Beautiful Courseware
 include::docs/Beautiful_Courseware.asc[]

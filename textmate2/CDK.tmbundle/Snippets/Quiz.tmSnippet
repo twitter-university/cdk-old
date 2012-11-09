@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?xml version="1.0"?&gt;
+&lt;questionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://marakana.com/xml/ns/spark/questionnaire_1.1.xsd" name="QUIZ_NAME"&gt;
+  &lt;description&gt;QUIZ_DESCRIPTION&lt;/description&gt;
+  &lt;notes/&gt;
+  
+  &lt;multiple-choice-question type="quiz" quiz-points="1" multiple-choice-answer="false"&gt;
+    &lt;question&gt;QUIZ_MULTI_CHOICE_QUESTION&lt;/question&gt;
+    &lt;multiple-choice-option correct="false"&gt;WRONG_ANSWER.&lt;/multiple-choice-option&gt;
+    &lt;multiple-choice-option correct="true"&gt;CORRECT_ANSWER. &lt;/multiple-choice-option&gt;
+    &lt;multiple-choice-option correct="false"&gt;WRONG_ANSWER.&lt;/multiple-choice-option&gt;
+    &lt;multiple-choice-option correct="false"&gt;WRONG_ANSWER.&lt;/multiple-choice-option&gt;
+  &lt;/multiple-choice-question&gt;
+  
+  
+&lt;/questionnaire&gt;
+</string>
+	<key>name</key>
+	<string>Quiz</string>
+	<key>tabTrigger</key>
+	<string>quiz</string>
+	<key>uuid</key>
+	<string>29468EEC-B695-4D48-BB9B-D48D16D377D0</string>
+</dict>
+</plist>

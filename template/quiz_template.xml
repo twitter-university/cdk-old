@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://marakana.com/xml/ns/spark/questionnaire_1.1.xsd" name="Quiz Template">
+  <description>Same of what can be done in quizzes.</description>
+  <notes></notes>
+  <text-question type="required" long-answer="false">
+    <question>Text Question - Short</question>
+  </text-question>
+  <text-question type="optional" long-answer="true">
+    <question>Text Question - Long</question>
+  </text-question>
+  <rating-question min="0" max="10" type="required">
+    <question>Rating Question</question>
+  </rating-question>
+  <multiple-choice-question type="required" multiple-choice-answer="false">
+    <question>Multiple Choice - Single Answer</question>
+    <multiple-choice-option correct="false">
+Choose A    </multiple-choice-option>
+    <multiple-choice-option correct="false">
+Choose B    </multiple-choice-option>
+    <multiple-choice-option correct="false">
+Choose C    </multiple-choice-option>
+  </multiple-choice-question>
+  <multiple-choice-question type="quiz" quiz-points="1" multiple-choice-answer="false">
+    <question>Multiple Choice - Multiple Answers</question>
+    <multiple-choice-option correct="false">
+Choose A    </multiple-choice-option>
+    <multiple-choice-option correct="true">
+Choose B    </multiple-choice-option>
+    <multiple-choice-option correct="false">
+Choose C    </multiple-choice-option>
+  </multiple-choice-question>
+</questionnaire>
+

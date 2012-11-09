@@ -1040,6 +1040,39 @@ body.deck-container .deck-status {
   .deck-toc {
     display: none; } }
 </style>
+<style type="text/css">
+.hidden{ display:none; }
+#help-text{
+    border: 1px solid #CCDDEE;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 10px 10px 10px 10px;
+    background-color:#FFFFFF;
+    position:absolute;
+    z-index:4;
+ }
+
+#help-text dl {  padding: 0.5em;width:600px; }
+#help-text dt:after {  content: ":";}
+#help-text dt {  float: left; clear: left; width: 160px; text-align: right; font-weight: bold; color: green; }
+#help-text dd {  margin: 0 0 0 180px; padding: 0 0 0.5em 0; }
+
+
+@media print {
+  #help-text {
+    display: none; } }
+</style>
+<style type="text/css">
+#breadcrumb{
+    position:absolute;
+    top: 0px;
+    padding-top:5px;
+    z-index:4;
+    color:#BBB;
+    font-size:16px;
+ }
+#breadcrumb h2 a{ text-decoration:none; color: #999;}
+
+</style>
 
 
 <!-- Theme CSS files -->
@@ -1066,6 +1099,10 @@ h2.section-slide {
 	font-size: 3em;
 	font-weight: bold;
   	text-align: center;
+}
+span.big {
+  font-size: 1.5em;
+  color: #0B7495;
 }
 /*
 .monospaced, code, pre {
@@ -2676,14 +2713,12 @@ This module provides a support for TOC to the deck.
 	*/
     $.extend(true, $[deck].defaults, {
         classes: {
-            toc: 'deck-toc-frame',
-            help: 'deck-help-frame'
+            toc: 'deck-toc-frame'
         },
 
         keys: {
             toc: 84, // t
-			sn: 83, //s
-			help: 72 //s
+			sn: 83 //s
         },
 
         selectors: {
@@ -2735,37 +2770,6 @@ This module provides a support for TOC to the deck.
     });
 
     /*
-	jQuery.deck('showHelp')
-
-	Shows the slide help by adding the class specified by the help class option
-	to the deck container.
-	*/
-    $[deck]('extend', 'showHelp', function() {
-        $[deck]('getContainer').addClass($[deck]('getOptions').classes.help);
-    });
-
-    /*
-	jQuery.deck('hideHelp')
-
-	Hides the slide help by removing the class specified by the help class
-	option from the deck container.
-	*/
-    $[deck]('extend', 'hideHelp', function() {
-        $[deck]('getContainer').removeClass($[deck]('getOptions').classes.help);
-    });
-
-    /*
-	jQuery.deck('toggleHelp')
-
-	Toggles between showing and hiding the help.
-	*/
-    $[deck]('extend', 'toggleHelp', function() {
-        $[deck]('getContainer').hasClass($[deck]('getOptions').classes.help) ?
-        $[deck]('hideHelp') : $[deck]('showHelp');
-    });
-
-
-    /*
         jQuery.deck('Init')
         */
     $d.bind('deck.init', function() {
@@ -2780,11 +2784,7 @@ This module provides a support for TOC to the deck.
             }else if(e.which === opts.keys.sn || $.inArray(e.which, opts.keys.sn) > -1) {
             	$[deck]('toggleSideNotes');
 				e.preventDefault();
-            }else if(e.which === opts.keys.help|| $.inArray(e.which, opts.keys.help) > -1) {
-	           	$[deck]('toggleHelp');
-				e.preventDefault();
-	        }
-
+            }
         });
 
         /* Hide TOC panel when user click on container */
@@ -2951,6 +2951,153 @@ This module provides a support for TOC to the deck.
 })(jQuery, 'deck');
 /*]]>*/
 </script>
+<script type="text/javascript">
+/*<![CDATA[*/
+/*!
+
+Copyright (c) 2012 Simeon Franklin
+MIT license
+*/
+
+/*
+This module provides a popup menu listing the shortcut key.
+*/
+
+(function($, deck, undefined) {
+    var $d = $(document);
+    $.deck.defaults.keys.helpKeycode = 72; // 'h'
+    $d.bind('deck.init', function() {
+       var help_text = $("<div id='help-text' style='display:none;'><dl>" +
+                     "<dt>&rarr; or space</dt><dd>Advance to the next slide</dd>" +
+                     "<dt>CTRL - t</dt><dd>Open Table of Contents</dd>" +
+                     "<dt>g</dt><dd>Navigate to # slide.</dd>" +
+                     "<dt>h</dt><dd>Show/Hide this help content</dd>" +
+                     "<dt>m</dt><dd>Preview Slides</dd>" +
+                     "<dt>s</dt><dd>Show/Hide sidebar</dd>" +
+                     "</dl></div>");
+       $("body").prepend(help_text);
+       var $help_text = $("#help-text");
+       $d.bind('keydown.help', function(event) {
+          var opts = $['deck']('getOptions');
+          if (event.which === opts.keys.helpKeycode) {
+              $help_text.toggle();
+          }
+          else{
+              $help_text.hide();
+          }
+       });
+    });
+})(jQuery, 'deck');
+/*]]>*/
+</script>
+<script type="text/javascript">
+/*<![CDATA[*/
+/*!
+
+Copyright (c) 2012 Simeon Franklin
+MIT license
+*/
+
+/*
+This module provides a breadcrumb menu listing the parent
+slides. Requires extra classes put on slides (slide0), subslides
+(slide1), subsubslides (slide2).
+
+*/
+
+(function($, deck, undefined) {
+    var $d = $(document);
+    $d.bind('deck.init', function() {
+       var bread = $("<div id='breadcrumb'></div>");
+       $("body").prepend(bread);
+       var $bread = $("#breadcrumb");
+       var opts = $[deck]('getOptions');
+       var updateCurrent = function(evt, from, to){
+           var $slide = $[deck]('getSlide', to);
+           // only three levels supported
+           if($slide.hasClass('slide2')){
+               var $slide1 = $slide.prevAll('.slide1').eq(0);
+               var $slide0 = $slide.prevAll('.slide0').eq(0);
+               $bread.html("<h2><a href='#" + $slide0.attr('id') + "'>" + $.trim($slide0.find('h2:first').text()) +
+                           "</a> &rsaquo;&rsaquo; <a href='#" + $slide1.attr('id') + " '>" +
+                           $.trim($slide1.find('h2:first').text()) + "</a></h2>");
+
+           }else if($slide.hasClass('slide1')){
+               var $slide0 = $slide.prevAll('.slide0').eq(0);
+               $bread.html("<h2><a href='#" + $slide0.attr('id') + "'>" +
+                           $.trim($slide0.find('h2:first').text()) + "</a></h2>");
+           }else{
+               $bread.html("");
+           }
+       };
+       $d.bind('deck.change', updateCurrent);
+    })
+})(jQuery, 'deck');
+/*]]>*/
+/*<![CDATA[*/
+/*!
+
+Copyright (c) 2012 Simeon Franklin
+MIT license
+*/
+
+/*
+
+  This module makes sure that switching to a new slide always scrolls
+  to the top.
+
+  Currently in deck.js presentations with long slides, switching from
+  one slide scrolled down the page to the next slide doesn't change
+  the position of the scroll bar.
+
+
+*/
+
+(function($, deck, undefined) {
+    var $d = $(document);
+    $d.bind('deck.init', function() {
+       var scrollup = function(evt, from, to){
+           $(document).scrollTop(0);
+       };
+       $d.bind('deck.change', scrollup);
+    })
+})(jQuery, 'deck');
+/*]]>*/
+/*<![CDATA[*/
+/*!
+
+Copyright (c) 2012 Simeon Franklin
+MIT license
+*/
+
+/*
+
+  Enables anchor targets to sections:
+
+  <a href="#Some_Section">Some Section</a>
+
+
+
+*/
+
+(function($, deck, undefined) {
+    var $d = $(document);
+    $d.bind('deck.init', function() {
+        var $links = $('a[href^="#"]').not('a[href^="#slide-"]').not('a[href="#title-slide"]');
+        var $h2s = $("h2");
+        $h2s.each(function(){
+                $(this).attr('id', $.trim($(this).text()).replace(" ", "_"));
+            });
+        $links.click(function(e){
+                var title = $(this).attr('href').replace(" ", "_");
+                var page = $(title).parents('section').attr('id');
+                $.deck('go', page);
+                e.preventDefault();
+            });
+        });
+})(jQuery, 'deck');
+/*]]>*/
+</script>
 
 
 </head>
@@ -2961,14 +3108,14 @@ This module provides a support for TOC to the deck.
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Overview of CDK</h2>
 <p>Marakana CDK is a set of tools, templates, documentation, and best practices for creating Beautiful Courseware.</p>
 <p>CDK is based on <a href="http://www.methods.co.nz/asciidoc/">Asciidoc</a> as the markup for authoring. New to AsciiDoc? Check out this <a href="http://powerman.name/doc/asciidoc">cheatsheet</a>.</p>
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Portable, Modular, Consistent Authoring</h2>
 <div class="imageblock">
 <div class="content">
@@ -3425,7 +3572,7 @@ PC9zdmc+Cg==" />
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">What&#8217;s Included in the Kit</h2>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -3464,7 +3611,7 @@ CDK is an attempt to bottle up the <strong>best practices</strong> for creating 
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">What CDK Is For</h2>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -3495,7 +3642,27 @@ CDK takes care of making your content look great. It comes with various template
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
+<h2 class="section-slide">AsciiDoc</h2>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+CDK uses AsciiDoc as markup language of choice
+</dt>
+<dd>
+<ul>
+<li>
+See <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a>
+</li>
+<li>
+See <a href="http://powerman.name/doc/asciidoc">AsciiDoc cheatsheet</a>
+</li>
+</ul>
+</dd>
+</dl></div>
+</section>
+
+<!--slide-->
+<section class="slide slide0">
 <h2 class="section-slide">Beautiful Courseware Structure</h2>
 <div class="imageblock">
 <div class="content">
@@ -3841,7 +4008,7 @@ dGlvbiBhYm91dCB0aGUgY291cnNlPC90c3Bhbj48L3RleHQ+PC9nPjwvZz48L2c+PC9zdmc+Cg==" />
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Beautiful Courseware Building Blocks</h2>
 <p>Beautiful Courseware consists of the following:</p>
 <ul>
@@ -3858,7 +4025,7 @@ Slides
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Course Building Blocks</h2>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -3930,7 +4097,7 @@ In this course, you learned how to design, develop, and maintain a space shuttle
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Module Building Blocks</h2>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -3993,7 +4160,7 @@ In this module, you learned to do the following: x, y, z. By now, you should be 
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Module 360</h2>
 <div class="imageblock">
 <div class="content">
@@ -7147,7 +7314,7 @@ GbAJgT8vpjUGjAFjwBgwBowBY8AYMAZKBQP/DzyI6WudZ48kAAAAAElFTkSuQmCC" />
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Slide Building Blocks</h2>
 <p>A <strong>Slide</strong> is a single topic. It should have the main section stating a point. This main section is a mental hook - something that communicates the idea quickly. Images are great as mental hooks, or short text.</p>
 <p>All supporting text can follow on below and can be as long as couple of screens worth of supporting text, code, images. If you want to be able to toggle them on/off during presentation, you can wrap the supporting text in an AsciiDoc side note block.</p>
@@ -7172,7 +7339,7 @@ GbAJgT8vpjUGjAFjwBgwBowBY8AYMAZKBQP/DzyI6WudZ48kAAAAAElFTkSuQmCC" />
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Requirements for Setting Up CDK</h2>
 <p>You need Python. If running on a platform other than OSX, you also need <a href="http://www.gnu.org/software/src-highlite/">GNU Source-Highlight</a>.</p>
 <p>Make sure CDK directory is in your path. In Bash, for example:</p>
@@ -7184,7 +7351,7 @@ GbAJgT8vpjUGjAFjwBgwBowBY8AYMAZKBQP/DzyI6WudZ48kAAAAAElFTkSuQmCC" />
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Tools</h2>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -7215,7 +7382,7 @@ This is the standard AsciiDoc processor, included as part of CDK. You can use it
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">CDK Goodies</h2>
 <div class="dlist"><dl>
 <dt class="hdlist1">
@@ -7280,22 +7447,23 @@ This is the original style guide for developing courseware. Needs an update.
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Feature Requests</h2>
 <ul>
 <li>
-Absolute tool bar that contains the following:
-<ul>
-<li>
-Bread crumbs, clickable
+ToC generator for Stream Posts. See for example how Android docs do it (top-right box): <a href="http://developer.android.com/guide/components/activities.html">http://developer.android.com/guide/components/activities.html</a>
 </li>
 <li>
-Help
+A way to make a bookmark?
 </li>
 <li>
-Slide number
+A way to create a note, possibly share it with others?
 </li>
-</ul>
+<li>
+Review questions automatically become polls, so we can see people&#8217;s results on a centralized dashboard.
+</li>
+<li>
+Markup extensions: I&#8217;d like to be able to make certain text BIG, for example.
 </li>
 <li>
 A tool to publish a course or a module directly to the cloud, such as S3, with a link to it.
@@ -7318,11 +7486,20 @@ About the author
 <li>
 Legal
 </li>
+<li>
+Using consecutive note/tip/warning images makes the first image appear disproportionately small.
+</li>
+<li>
+We should use the up arrow to move back to the beginning of the module?
+</li>
+<li>
+Position the module titles (H2s) in the middle of the page
+</li>
 </ul>
 </section>
 
 <!--slide-->
-<section class="slide">
+<section class="slide slide0">
 <h2 class="section-slide">Legal Disclaimer</h2>
 <p>INFORMATION IN THIS DOCUMENT IS PROVIDED “AS IS”. NO LICENSE, EXPRESS OR IMPLIED, BY ESTOPPEL OR OTHERWISE, TO ANY INTELLECTUAL PROPERTY RIGHTS IS GRANTED BY THIS DOCUMENT. MARAKANA ASSUMES NO LIABILITY WHATSOEVER AND MARAKANA DISCLAIMS ANY EXPRESS OR IMPLIED WARRANTY, RELATING TO THIS INFORMATION INCLUDING LIABILITY OR WARRANTIES RELATING TO FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR INFRINGEMENT OF ANY PATENT, COPYRIGHT OR OTHER INTELLECTUAL PROPERTY RIGHT.</p>
 <p>Other names and brands may be claimed as the property of others.</p>
