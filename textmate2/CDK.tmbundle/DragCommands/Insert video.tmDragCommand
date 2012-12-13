@@ -4,20 +4,18 @@
 <dict>
 	<key>command</key>
 	<string>#!/usr/bin/env ruby -wKU
-puts "image::#{ENV['TM_DROPPED_FILE']}[]"
+puts "video::#{ENV['TM_DROPPED_FILE']}[]"
 </string>
 	<key>draggedFileExtensions</key>
 	<array>
-		<string>png</string>
-		<string>svg</string>
-		<string>jpg</string>
-		<string>gif</string>
+		<string>mov</string>
+		<string>ogv</string>
 	</array>
 	<key>name</key>
-	<string>Insert image</string>
+	<string>Insert video</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>uuid</key>
-	<string>759AE3EA-047C-4E00-9DFF-7391ABF98651</string>
+	<string>E2821E59-58CB-4BB9-AE21-235D892B30D2</string>
 </dict>
 </plist>
