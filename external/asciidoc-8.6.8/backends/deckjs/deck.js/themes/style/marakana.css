@@ -68,7 +68,11 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgCAYA
 }
 .deck-container .slide p {
   margin-bottom: 0.5em;
-  font-size: 1.2em;
+  font-size: 1.3em;
+}
+.deck-container .slide .sidebarblock {
+  font-size: 0.8em;
+  color:#666;
 }
 .deck-container .slide pre {
   border-color: #cde;

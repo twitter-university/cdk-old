@@ -14,7 +14,7 @@ This module provides a popup menu listing the shortcut key.
     $d.bind('deck.init', function() {
        var help_text = $("<div id='help-text' style='display:none;'><dl>" +
                      "<dt>&rarr; or space</dt><dd>Advance to the next slide</dd>" +
-                     "<dt>CTRL - t</dt><dd>Open Table of Contents</dd>" +
+                     "<dt>t</dt><dd>Open Table of Contents</dd>" +
                      "<dt>g</dt><dd>Navigate to # slide.</dd>" +
                      "<dt>h</dt><dd>Show/Hide this help content</dd>" +                     
                      "<dt>m</dt><dd>Preview Slides</dd>" +
