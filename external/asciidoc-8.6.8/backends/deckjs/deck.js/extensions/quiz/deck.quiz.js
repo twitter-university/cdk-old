@@ -23,7 +23,7 @@ transforms to an html form.
     var $d = $(document);
     $d.bind('deck.init', function() {
             var action = $("span.form").text();
-            $controls = $("span.textarea, span.text");
+            var $controls = $("span.textarea, span.text");
             $controls.filter(".text").each(function(){
                     $(this).replaceWith("<div class='form'><input type='text' name='" + $(this).text() + "' class='input'></div>");
                 });
