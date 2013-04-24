@@ -51,6 +51,38 @@ include::docs/Beautiful_Courseware.asc[]
 // Setup Instructions
 include::docs/Setup.asc[]
 
+== Document Attributes
+
+* Since our documents are often composed of other documents, to get the correct revision date, it's easiest to assume the current date:
++
+...................................
+:revdate: {sys: date '+%B %e, %Y'}
+...................................
+
+* When using DeckJS
+** To get separate slides for section-3, add the following to your document:
++
+...................................
+:deckjs_sect3_enable:   
+...................................
++
+** To get title help to show up on the title side (as opposed to in the preamble), add the following:
++
+...................................
+:deckjs_title_help: Press ➡ or space to move to the next slide, 't' for ToC, 'h' for help.
+...................................
++
+** To get the copyright to show on every slide, add the following:
++
+...................................
+:copyright: 2013 Marakana, Inc. All rights reserved.
+
+= Your Document Title =
+
+{copyright}
+...................................
+
+
 == Feature Requests ==
 
 * ToC generator for Stream Posts. See for example how Android docs do it (top-right box): http://developer.android.com/guide/components/activities.html
