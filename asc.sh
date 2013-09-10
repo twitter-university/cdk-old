@@ -6,7 +6,7 @@ CDK_DIR=$( cd "$( dirname "$0" )" && pwd )
 
 attrs=()
 attrs+=("-b deckjs")
-attrs+=("-a deckjs_theme=marakana")
+attrs+=("-a deckjs_theme=twitter")
 attrs+=("-a data-uri")
 attrs+=("-a iconsdir=${CDK_DIR}/images/icons")
 attrs+=("-a icons")

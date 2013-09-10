@@ -110,12 +110,14 @@ This module provides a support for TOC to the deck.
         
         /* Bind key events */
         $d.unbind('keydown.decktoc').bind('keydown.decktoc', function(e) {
+            if(e.metaKey) // don't trap CTRL-t/CMD-t
+                return true;
             if (e.which === opts.keys.toc || $.inArray(e.which, opts.keys.toc) > -1) {
-                $[deck]('toggleToc');
-                e.preventDefault();
+                    $[deck]('toggleToc');
+                    e.preventDefault();
             }else if(e.which === opts.keys.sn || $.inArray(e.which, opts.keys.sn) > -1) {
-            	$[deck]('toggleSideNotes');
-				e.preventDefault();
+            	    $[deck]('toggleSideNotes');
+				    e.preventDefault();
             }
         });
         
