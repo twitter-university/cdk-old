@@ -37,15 +37,9 @@ span.big {
   color: #0B7495;
 }
 
-/*
-.monospaced, code, pre {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-  padding: 0;
-  margin: 0;
+.deck-container .slide ol li p{
+  font-size: @font-code;
 }
-*/
 
 .deck-container {
   font-family: 'PT Sans';
@@ -94,7 +88,8 @@ span.big {
   /* http://nicolasgallagher.com/css-drop-shadows-without-images/ */
 }
 .deck-container .slide code, .deck-container .slide pre {
-  font-size: @font-normal;
+  font-size: @font-code !important;
+  line-height: (@font-code * 1.2);
   font-family: Courier, 'Courier New', monospace;
 }
 .deck-container .slide dt {
@@ -275,7 +270,7 @@ img[alt="9"]
 div.colist.arabic table tbody tr td:first-child{/*may cause issues*/
 	width: 26px
 }
-.monospaced{
+span.monospaced{
 	font-family: courier !important;
 	color: #434343 !important;
 	text-shadow: 1px 1px 2px #D3D0D0 !important;

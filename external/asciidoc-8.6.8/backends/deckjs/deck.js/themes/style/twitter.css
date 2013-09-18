@@ -28,15 +28,9 @@ span.big {
   font-size: 2.719406674907293em;
   color: #0B7495;
 }
-/*
-.monospaced, code, pre {
-  font-family: "Courier New", Courier, monospace;
-  font-size: inherit;
-  color: navy;
-  padding: 0;
-  margin: 0;
+.deck-container .slide ol li p {
+  font-size: 1.038764561120679em;
 }
-*/
 .deck-container {
   font-family: 'PT Sans';
   font-size: 1.6807210598932587em;
@@ -91,7 +85,8 @@ span.big {
 }
 .deck-container .slide code,
 .deck-container .slide pre {
-  font-size: 1.6807210598932587em;
+  font-size: 1.038764561120679em !important;
+  line-height: 1.2465174733448148em;
   font-family: Courier, 'Courier New', monospace;
 }
 .deck-container .slide dt {
@@ -293,7 +288,7 @@ div.colist.arabic table tbody tr td:first-child {
 
   width: 26px;
 }
-.monospaced {
+span.monospaced {
   font-family: courier !important;
   color: #434343 !important;
   text-shadow: 1px 1px 2px #D3D0D0 !important;
