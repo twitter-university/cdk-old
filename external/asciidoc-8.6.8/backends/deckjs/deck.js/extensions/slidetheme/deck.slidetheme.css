@@ -10,7 +10,7 @@ section.large-black-slide h2.section-slide {
   margin-bottom: 0px;
   line-height: 1.1em;
 }
-section.black-slide h2.section-slide {
+section.black-slide h2 {
   font-size: 4.4em !important;
   text-align: center !important;
   color: white !important;

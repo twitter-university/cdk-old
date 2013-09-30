@@ -30,6 +30,19 @@ enclosing section
             $img.hide();
         });
 
-        
+        var fx = true; // are we on or off?
+        $csstransitions = $(".csstransitions:first");
+        $d.bind('deck.change', function(event, from, to){
+            var $slide = $(".slide").eq(to);
+            if(fx && $slide.hasClass('notransition')){
+                fx = false;
+                $csstransitions.removeClass('csstransitions');
+            }
+            else if(!fx && !$slide.hasClass('notransition')){
+                fx = true;
+                $csstransitions.addClass('csstransitions');
+            }
+        });
     })
+    // Turn off transitions for some slides
 })(jQuery, 'deck');
