@@ -1,3 +1,4 @@
+
 .csstransitions.csstransforms {
   overflow-x: hidden;
 }
@@ -8,7 +9,7 @@
   -o-transition: -o-transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
 }
-.csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide {
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide, section.notransition{
   position: absolute;
   top: 0;
   left: 0;
